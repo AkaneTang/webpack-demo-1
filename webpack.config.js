@@ -8,6 +8,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
   },
+  devtool: "inline-source-map",
+  devServer: {
+    static: "./dist",
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: "Akane",
